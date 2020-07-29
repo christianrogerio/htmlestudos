@@ -10,7 +10,8 @@
     .flexbox{
         height: 250px;
         border: 1px solid red;
-        display: flex;
+        display: flex;    
+        margin-bottom: 15px;
     }
 
     .flexbox div{
@@ -18,15 +19,252 @@
         width: 300px;
         height: 15px;
     }
+
+    .flexbox:nth-child(4){
+        flex-flow: row nowrap;
+    }
+    .flexbox:nth-child(5){
+        justify-content: space-between;
+    }
+
+    .flexbox:nth-child(5) div{
+        width: 30px;
+        
+    }
+
+    .flexbox:nth-child(6) {
+        align-items: center;
+        justify-content: center;
+        
+    } 
+
+    .flexbox:nth-child(7) div{
+        width: 30px;
+        
+    }
+
+    .flexbox:nth-child(7) {
+        align-items: baseline;
+        
+    }     
+
+    .flexbox8 {
+        height: 250px;
+        border: 1px solid red;
+        display: flex;    
+        margin-bottom: 15px;
+
+       /* align-items: flex-end;*/
+        align-content: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .flexbox8 div {
+        background: orange;
+        width: 100px;
+    }
+
+
+    .flexbox9 {
+        height: 250px;
+        border: 1px solid red;
+        display: flex;    
+        margin-bottom: 15px;
+        align-content: stretch;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flexbox9 div {
+        background: yellow;
+        width: 100px;
+        flex-basis: 100px;
+    }
+
+
+    .flexbox10 {
+        height: 250px;
+        border: 1px solid red;
+        display: flex;    
+        margin-bottom: 15px;
+        align-content: stretch;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flexbox10 div {
+        background: green;
+        width: 100px;
+        flex-grow: 1;
+    }
+
+    .flexbox10 div:nth-child(2) {
+        background: blue;
+        width: 100px;
+        flex-grow: 2;
+    }
+
+
+    .flexbox11 {
+        height: 250px;
+        border: 1px solid red;
+        display: flex;    
+        margin-bottom: 15px;
+        align-content: stretch;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flexbox11 div {
+        background: hotpink;
+        width: 100px;
+        flex-grow: 1;
+    }
+
+    .flexbox11 div:nth-child(2) {
+        background: blueviolet;
+        width: 100px;
+        flex-shrink: 2;
+    }
+
+
+    .flexbox12 {
+        height: 50px;
+        border: 1px solid red;        
+        margin-bottom: 15px;
+        display: flex;
+        flex: 1 0 100px; /* grow shrink basis */
+    }
+
+    .flexbox12 div {
+        background: hotpink;
+        width: 100px;
+        flex-grow: 1;
+        border: 1px solid black;
+    }
+    .flexbox12 div:nth-child(2) {
+        order: 0;
+    }
+
+    .flexbox14 {
+        height: 50px;
+        border: 1px solid red;        
+        margin-bottom: 15px;
+        display: flex;
+        flex: 1 0 100px; /* grow shrink basis */
+        align-items: flex-start;
+    }
+
+    .flexbox14 div {
+        background: khaki;
+        width: 100px;
+        flex-grow: 1;
+        border: 1px solid black;
+    }    
+
+    .flexbox14 div:nth-child(2) {
+        align-self: flex-end;
+    }  
+
+    .flexbox14 div:nth-child(1) {
+        align-self: center;
+    }  
+
+    .flexbox14 div:nth-child(3) {
+        align-self: stretch;
+    }  
+
+
+    .flexbox15 {
+        height: 500px;
+        border: 1px solid blue;        
+        margin-bottom: 15px;
+        display: flex;
+        flex: 1 0 100px; /* grow shrink basis */
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+
+    .flexbox15 div {
+        background: lightskyblue;
+        border: 1px solid black;
+        flex-basis: 60px;
+    }    
+
 </style>
 <body>
     <h1>FlexBox</h1>
+    <p>Este é um exemplo de uso do Flex
+    </p>
+    <p>O exemplo é para entender seu uso.</p>
+    <div class="flexbox">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>        
+    </div>
 
     <div class="flexbox">
         <div class="div1">1</div>
         <div class="div2">2</div>
         <div class="div3">3</div>        
     </div>
+
+    <div class="flexbox">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>        
+    </div>    
+
+    <div class="flexbox">
+        <div class="div1">1</div>
+        <div class="div2" style="font-size: 2em;">2</div>
+        <div class="div3">3</div>        
+    </div>   
+
+    <div class="flexbox8">
+        <div class="div1">1</div>
+        <div class="div2" style="font-size: 2em;">2</div>
+        <div class="div3">3</div>        
+    </div>   
+
+
+    <div class="flexbox9">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>        
+    </div>   
+
+    <div class="flexbox10">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>        
+    </div>   
+
+    <div class="flexbox11">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>        
+    </div>  
+
+    <div class="flexbox12">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>        
+    </div>  
+
+    <div class="flexbox14">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>        
+    </div>     
+
+    <div class="flexbox15">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>        
+    </div>  
 
 </body>
 </html>
