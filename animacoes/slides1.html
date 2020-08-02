@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Christian Rogério Câmara de Abreu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slides em HTML 5</title>
+</head>
+
+<style>
+
+@keyframes slide{
+ 0%,22%{
+     transform: translateY(0);
+ }
+ 25%,47%{
+    transform: translateY(-50vh);
+ }
+ 50%,72%{
+    transform: translateY(-100vh);
+ } 
+ 75%,97%{
+    transform: translateY(-150vh);
+ }  
+ 100%{
+     transform: translateY(0vh); 
+ }
+}
+
+body{
+    font-family: sans-serif;
+    color: white;
+    background: #1a1818;
+    margin: 0;
+}
+
+#slide-externo{
+    width: 80vw;
+    height: 50vh;
+    border: 10px solid white;
+    box-shadow: 0 0 10px black;
+    margin-left: 10vw;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#slide-interno{
+    width: 100%;
+    /* transform: translateY(-50vh);*/
+    animation: slide 15s infinite cubic-bezier(.38,-0.45,.45,1.58);
+
+}
+
+#slide-interno img{
+    display: block;
+    height: 50vh;
+    width: 100% ;
+    object-fit: cover;
+}
+</style>
+
+<body>
+    <h1>Slides em HTML 5 e CSS</h1>
+    <div id="slide-externo">
+        <div id="slide-interno">
+            <img src="imgs/1.jpeg" alt="imagem 1">
+            <img src="imgs/2.jpg" alt="imagem 2">
+            <img src="imgs/3.jpeg" alt="imagem 3">
+            <img src="imgs/4.jpeg" alt="imagem 4">
+            <img src="imgs/5.jpeg" alt="imagem 5">
+        </div>
+    </div>
+</body>
+</html>
