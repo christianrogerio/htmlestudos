@@ -9,21 +9,32 @@
 <body>
     <h1>Classe com Function no JavaScript</h1>
     <script>
-    function Caneta(){
-        this.cor = '';
-        this.preco = 0;
+    function Caneta(cor, preco, nome){
+        var nome = nome||'';
+        this.cor = cor||'';
+        this.preco = preco||0;
         this.mudarCor = function(cor){
             this.cor = cor;
         }
+        this.mudarNome = function(nm){
+            nome = nm;
+        }
     }
     let c = new Caneta();
-    let c2 = new Caneta();
+    let c2 = new Caneta('amarelo',45.99);
     c.mudarCor('verde');
     c2.mudarCor('vermelho');
     c.preco = 2.3;
-    alert(c.cor);
+    /*alert(c.cor);
     alert(c.preco);
     alert(c2.cor);
+    alert(c2.preco);
+    */
+    
+    c2.mudarNome('Labra');
+    c2.nome = 'Bic';
+    alert(c2.nome);
+
     </script>
 </body>
 </html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LI Dinâmico</title>
+</head>
+<style>
+.feita{
+    text-decoration: line-through #555;
+}
+</style>
+
+<body>
+    <h1>HTML dinâmico  - LI e eventos</h1>
+    <input type="text" id="tarefa">
+    <button id="btAdicionar">Adicionar Tarefa</button>
+    <ul id="tarefas">        
+    </ul>
+<script>
+var $tarefas = document.querySelector("#tarefas");
+var $tarefa = document.querySelector("#tarefa");
+var $btAdicionar = document.querySelector("#btAdicionar");
+
+$tarefas.addEventListener('click', function(e){
+    if(e.target.nodeName === 'LI'){
+        //marcarTarefa(e.target);
+        remover(e.target);
+    }
+});
+
+function remover(e){
+    if(confirm('Excluir '+e.textContent+'?')){
+        $tarefas.removeChild(e);
+    }
+}
+
+$btAdicionar.addEventListener('click',adicionarTarefa);
+
+function adicionarTarefa(){
+   if($tarefa.value){
+    let $li = document.createElement('LI');
+    $li.appendChild(document.createTextNode($tarefa.value));
+    //$li.addEventListener('click',marcarTarefa);
+    $tarefas.appendChild($li);
+    $tarefa.value = '';
+   }   
+}
+
+function marcarTarefa(tarefa){
+    tarefa.classList.toggle('feita');
+}
+
+/*
+function marcarTarefa(){
+    this.classList.toggle('feita');
+}
+*/
+</script>
+</body>
+</html>
