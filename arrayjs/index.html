@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Uso funções de Array JavaScript</title>
+</head>
+<body>
+    <h1>Array com JS e funções específicas</h1>
+    <script>
+        let lista = new Array(10,30,'Christian',11,122);
+        let ev = lista.every(function(elemento, indice, obj){
+            return typeof elemento === 'string';
+        });
+        alert('Every: '+ev);
+        let sss = lista.some(function(elemento, indice, obj){
+            return typeof elemento === 'string';
+        });
+        alert('some: '+sss);
+
+        let numeros = lista.filter(function(elemento, indice, arr){
+            return typeof elemento === 'number';
+        });
+        alert('Nrs.: '+numeros);
+        
+        lista.forEach(function(elemento, indice, arr){
+            alert('forEach: '+elemento);
+        });
+        
+        let numeros2 = numeros.map(function(elemento, indice, obj){
+            return elemento * 10;
+        });
+
+        alert('Map: '+numeros2);
+    </script>
+</body>
+</html>
