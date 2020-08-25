@@ -28,11 +28,21 @@
             alert('forEach: '+elemento);
         });
         
-        let numeros2 = numeros.map(function(elemento, indice, obj){
+        let numeros2 = numeros.map((elemento, indice, obj)=>{
             return elemento * 10;
         });
 
         alert('Map: '+numeros2);
+
+        let sss2 = lista.some(elemento=>{
+            return typeof elemento === 'string';
+        });
+        alert('some 2: '+sss2);
+
+        let sss3 = lista.some(elemento=>typeof elemento === 'string');
+        alert('some 3: '+sss3);
+
+
     </script>
 </body>
 </html>

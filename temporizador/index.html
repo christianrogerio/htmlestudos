@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Temporizadores com JavaScript</title>
+</head>
+<body>
+    <h1>Temporizadores com JavaScript</h1>
+    <button id="btParar">Parar Intervalo</button>
+    <div id="dv">Vazio.</div>
+    <div id="dv2">Vazio.</div>
+    <script>
+            var dv = document.getElementById('dv');
+            var dv2 = document.getElementById('dv2');
+            dv.innerHTML = 'Iniciando...';
+            setTimeout(function(){
+                dv.textContent = 'Timeout!';
+            },2000);
+    
+            var n = 0;
+            var intervalo = setInterval(function(){            
+                dv.textContent = 'Intevalo rodou '+(++n);
+            },5000);
+            
+            var n2 = 0;
+            var intervalo2 = setInterval(function(){            
+                dv.textContent = 'Intevalo rodou '+(++n2);
+            },10);
+
+            let bt = document.getSelection("#btParar");
+            document.addEventListener('click',()=>{
+                clearInterval(intervalo);
+                clearInterval(intervalo2);
+                dv.textContent = 'Parou ';
+            });    
+        </script>    
+</body>
+</html>
