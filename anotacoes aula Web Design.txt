@@ -1,0 +1,132 @@
+-Templates de sites html?
+    https://html5up.net/txt
+
+-Icones em imagens em um arquivo de Fonte de texto?
+    https://fontawesome.com/
+    https://www.udemy.com/course/curso-web-design-fundamentos-aprenda-html-css-e-javascript/learn/lecture/10667816#questions
+
+
+-CSS resetar propriedades para todos os navegadores?
+    CSS Reset
+    Css Normalize
+    https://www.udemy.com/course/curso-web-design-fundamentos-aprenda-html-css-e-javascript/learn/lecture/10667840#questions
+    5:00
+
+-fontes para usar no site?
+    google fontes
+
+-Plugin Chrome para achar uma fonte?
+    Whatfont
+
+-Seleção de Atributos no CSS?
+    Chama-se seletores compostos.
+    https://www.udemy.com/course/curso-web-design-fundamentos-aprenda-html-css-e-javascript/learn/lecture/10809800#questions
+    
+-Css seletor com espaços de tags?
+    css: article a {} - indica "a" pode ser qualquer descendente (filho, neto, bisneto)
+    html afetado: article p a; article a; article p p h1 a
+
+-Css seletor > ?
+    Apenas os filhos diretos (bisneto, neto não alcança).
+    css: article > a{}
+    html afetado: <article><a>
+    html não afetado: <article><p><a>
+
+-Css seletor +?
+    Seleciona o IRMÃO ADJACENTE.
+    Apenas o elemento irmão que vem logo depois de outro.
+    NÃO está dentro de outro, é o primeiro irmão.
+    css: article h3 + a
+    html afetado: 
+        <article> <h3></h3> <a></a> ..se tiver outro <a> não será afetado.
+    html não afetado:
+        <article><a></a>
+        
+-CSS seletor ~?
+    Todos os irmãos próximos.
+    CSS: article h3 ~ p{}
+    HTMl afetado: <article><h3></h3><p></p><p></p><p></p><p></p> -> todos os <p></p> serão afetados - pois são irmãos de H3
+
+-O que é um seletor de atributo?
+    Permite selecionar as tags com atributos com determinado conteúdo, ou atributo presente.
+    Exemplo:
+        CSS:
+            a[title="setar"]{
+            background-color: aquamarine;
+            }
+        HTML AFETADO:
+            <p><a title="setar" href="#">Um link <bold>negrito</bold></a></p>
+
+-Filtrar apenas atributo que começa com valor?
+    Usar tag ^ (chapéu).
+    a[href^="#"]{
+        background-color: brown;
+    }    
+
+-Filtrar apenas atributo que termina com determinado valor?
+    a[href$="#"]{
+        background-color: chartreuse;
+    }
+
+-Filtrar com NOT, que não são (class, compartivo de atributo, tag)?
+    Não é tag a
+        :not(a){
+            background-color: coral;
+        }
+
+    Tag P que não usa Class "destaque":
+        p:not(.destaque){
+        background-color: darkblue;
+        }
+
+    Tag A que Title <> "setar"
+        a:not([title="setar"]){
+        background-color: darkgoldenrod;
+        }
+
+ -Como se chama os elementos : após um definição no CSS?
+    Pseudo classes ou Pseudo elementos. Ex: :hover :not, etc
+    https://www.udemy.com/course/curso-web-design-fundamentos-aprenda-html-css-e-javascript/learn/lecture/10809818#questions       
+    https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes
+    :pseudo classes
+    ::pseudo elementos
+
+ -Fontes para usar no site?
+    https://icomoon.io/app
+    https://www.udemy.com/course/curso-web-design-fundamentos-aprenda-html-css-e-javascript/learn/lecture/10881010#overview   
+
+
+-site põe no CSS os comandos de browsers específicos como Edger da Microsoft?
+    https://autoprefixer.github.io/
+
+-Site informa se um determinado item CSS pode ser usado?
+    https://caniuse.com/
+    https://www.udemy.com/course/curso-web-design-fundamentos-aprenda-html-css-e-javascript/learn/lecture/11080358#overview
+
+
+-Como setar texto HTML num div?
+    .innerHTML - setar texto com tags html
+    .textContent - setar somente texto, sem tags HTML
+
+-Como usar Arrow Function do Javascript "=>" ?
+    Você pode omitir a palavra function, via uso do comando =>. Exemplo:
+
+        let numeros2 = numeros.map(function(elemento, indice, obj){
+            return elemento * 10;
+        });
+
+
+        let numeros2 = numeros.map((elemento, indice, obj)=>{
+            return elemento * 10;
+        });
+
+        alert('Map: '+numeros2);
+
+        let sss2 = lista.some(elemento=>{
+            return typeof elemento === 'string';
+        });
+        alert('some 2: '+sss2);
+
+        let sss3 = lista.some(elemento=>typeof elemento === 'string');
+        alert('some 3: '+sss3);
+        /Users/christian/Documents/aulawebdesign/htmlestudos/arrayjs/index.html

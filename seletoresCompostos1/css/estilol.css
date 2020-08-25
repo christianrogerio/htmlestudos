@@ -1,0 +1,46 @@
+a:not([title="setar"]){
+    background-color: darkgoldenrod;
+}
+/*
+p:not(.destaque){
+    background-color: darkblue;
+}
+*/
+/*
+:not(a){
+    background-color: coral;
+}
+*/
+/*
+a[href$="#"]{
+    background-color: chartreuse;
+}
+*/
+/*
+a[href^="#"]{
+    background-color: brown;
+}
+*/
+
+/*
+a[title="setar"]{
+    background-color: aquamarine;
+}
+*/
+
+/*
+article h3 ~ p{
+    background-color: blueviolet;
+}
+*/
+/*
+article p + p{
+    background: green;
+}
+*/
+
+/*
+article >p > a{
+    color: red;
+}
+*/
