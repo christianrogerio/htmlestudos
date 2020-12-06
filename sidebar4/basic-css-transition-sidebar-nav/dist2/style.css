@@ -1,0 +1,22 @@
+#lgMenu{
+    width: 400px;
+    height: 100%;
+    top: 0;
+    left: -400px;
+    overflow:hidden;
+    background-color: green;
+    box-shadow: 5px 5px 10px grey;
+    position: absolute;
+    z-index: 11;
+    opacity: 0;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    
+}
+
+
+
+#lgMenu.enter{
+    opacity: 1;
+    left: 0;
+}

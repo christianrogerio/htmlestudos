@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Sidebar Transitions</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
+  <link rel="stylesheet" href="./style2.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="st-container" class="st-container">
+
+  <nav class="st-menu st-effect-1" id="menu-1">
+    <h2 class="icon icon-lab">Sidebar</h2>
+    <ul>
+      <li><a class="icon icon-data" href="#">Data Management</a></li>
+      <li><a class="icon icon-location" href="#">Location</a></li>
+      <li><a class="icon icon-study" href="#">Study</a></li>
+      <li><a class="icon icon-photo" href="#">Collections</a></li>
+      <li><a class="icon icon-wallet" href="#">Credits</a></li>
+    </ul>
+  </nav>
+
+
+
+  <div class="st-pusher">
+    <!-- 	
+					example menus 
+					these menus will be under the push wrapper
+				-->
+   
+
+    <div class="st-content">
+      <!-- this is the wrapper for the content -->
+      <div class="st-content-inner">
+        <!-- extra div for emulating position:fixed of the menu -->
+        <!-- Top Navigation -->
+        <header class="codrops-header">
+          <h1>Sidebar Transitions <span>Transition effects for off-canvas views</span></h1>
+        </header>
+        <div class="main clearfix">
+          <div id="st-trigger-effects" class="column">
+            <button data-effect="st-effect-1">Slide in on top</button>
+
+          </div>
+          <div class="column">
+            <p>Sidebar menus or off-canvas navigations can be revealed in many creative ways.</p>
+            <p>Here is some inspiration for showing them in style using CSS transitions.</p>
+          </div>
+        </div>
+        <!-- /main -->
+      </div>
+      <!-- /st-content-inner -->
+    </div>
+    <!-- /st-content -->
+  </div>
+</div>
+<!-- partial -->
+  <script  src="./script2.js"></script>
+
+</body>
+</html>
