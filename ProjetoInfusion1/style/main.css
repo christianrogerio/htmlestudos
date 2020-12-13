@@ -21,6 +21,11 @@ img{
     width: 100%;
 }
 
+.js .header{
+    position: fixed;
+    width: 100%;
+}
+
 .logo-text{
     text-transform: uppercase;
     background-color: #63c6ae;
@@ -68,8 +73,12 @@ img{
 
 }
 
-.header__ btnMenu{
-
+.header__btnMenu{
+    float: right;
+    margin: 1.5em;
+    background: transparent;
+    border: none;
+    font-size: 14px; 
 }
 
 .hero{
@@ -379,5 +388,8 @@ img{
 }
 
 
+.js .header__nav{
+    transition: max-height 1s;
+}
 
-/* 343 */
+/* 346 */
